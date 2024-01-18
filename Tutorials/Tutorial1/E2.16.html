@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Feedback</title>
+</head>
+<body>
+    <h1>Provide feedback</h1>
+    <form action="http://www.deitel.com" method="post">
+        <input type="text" placeholder="Enter your name" id="userName">
+        <input type="text" placeholder="Enter your email" id="userEmail">
+        
+        <div>What did you like about your visit</div>
+        <label for="checkboxCampus">Campus</label>
+        <input type="checkbox" id="checkboxCampus">
+
+        <label for="checkboxStudents">Students</label>
+        <input type="checkbox" id="checkboxStudents">
+
+        <label for="checkboxLocation">Location</label>
+        <input type="checkbox" id="checkboxLocation">
+
+        <label for="checkboxAtmosphere">Atmosphere</label>
+        <input type="checkbox" id="checkboxAtmosphere">
+
+        <label for="checkboxDormRooms">Dorm Rooms</label>
+        <input type="checkbox" id="checkboxDormRooms">
+
+        <label for="checkboxSports">Sports</label>
+        <input type="checkbox" id="checkboxSports">
+
+        <div>How did you get interested by our college</div>
+        <label for="radioButtonFriends">Friends</label>
+        <input type="radio" id="radioButtonFriends" name="interest">
+        
+        <label for="radioButtonTelevision">Television</label>
+        <input type="radio" id="radioButtonTelevision" name="interest">
+
+        <label for="radioButtonInternet">Internet</label>
+        <input type="radio" id="radioButtonInternet" name="interest">
+
+        <label for="radioButtonOther">Other</label>
+        <input type="radio" id="radioButtonOther" name="interest">
+        <div>
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments"></textarea>
+            <input type="submit" name="Submit">
+            <input type="reset" name="Clear">
+        </div>
+    </form>
+</body>
+</html>
