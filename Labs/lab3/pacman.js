@@ -16,7 +16,7 @@ function createGame(n){
     fruitPos = n-3;
     ghostPos = n-1;
     table[fruitPos] = '@';
-    table[ghostPos] = '^.';
+    table[ghostPos] = '^';
     return table;
 }
 
@@ -55,20 +55,39 @@ function checkBoardComplete(game){
     } 
 }
 
+function moveGhost(game){
+    if(ghostPos-1 < 0){
+        game[ghostPos] = '.'
+        ghostPos = game.length
+        game[ghostPos] = '^'
+    } else{
+        temp = game[ghostPos-1];
+        game[ghostPos] = temp;
+        game[ghostPos-1] = '^';
+    }
+    ghostPos--;
+};
+
 let game = createGame(10);
 
-console.log(game);
-console.log(moveLeft(game));
-console.log(moveRight(game));
-console.log(moveRight(game));
-console.log(moveRight(game));
-console.log(moveRight(game));
-console.log(moveRight(game));
-console.log(moveRight(game));
-console.log(moveRight(game));
-console.log(moveRight(game));
-console.log(moveRight(game));
-console.log(checkBoardComplete(game));
-console.log(moveRight(game));
+setInterval( () =>{
+    console.log(game);
+    moveGhost(game);
+}, 1000);
+
+
+// console.log(moveLeft(game));
+// console.log(moveRight(game));
+// console.log(moveRight(game));
+// console.log(moveRight(game));
+// console.log(moveRight(game));
+// console.log(moveRight(game));
+// console.log(moveRight(game));
+// console.log(moveRight(game));
+// console.log(moveRight(game));
+// console.log(moveRight(game));
+// console.log(checkBoardComplete(game));
+// console.log(moveRight(game));
+
 
 
