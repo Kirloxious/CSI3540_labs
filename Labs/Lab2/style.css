@@ -1,0 +1,39 @@
+h1, h2, .h1, .h2{
+    margin-top: 0;
+    margin-bottom: 0;
+    color: rgb(0, 128, 255);
+}
+
+.header{
+    margin-bottom: 10px;
+}
+
+.information{
+    margin-left: 10px;
+}
+
+li.projectName{
+    font-size: 18px;
+}
+
+.description{
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+ul.project{
+    margin-top: 5px;
+    list-style-type: none;
+}
+
+ul{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+body{
+    margin-left: 20px;
+    margin-top: 20px;
+}

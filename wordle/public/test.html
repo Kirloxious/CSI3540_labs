@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="assets/wordle_engine.js" ></script>
+    <script type="text/javascript" src="assets/wordle_game.js" ></script>
+    <link rel="stylesheet" href="assets/style.css">
+
+</head>
+<body>
+    <div class="board" id="board">
+        <div class="row" id="row1">
+            <div class="letter-box" id="box1">1</div>
+            <div class="letter-box" id="box2">2</div>
+            <div class="letter-box" id="box3">3</div>
+            <div class="letter-box" id="box4">4</div>
+            <div class="letter-box" id="box5">5</div>
+        </div>
+        <div class="row" id="row2">
+            <div class="letter-box">1</div>
+            <div class="letter-box">2</div>
+            <div class="letter-box">3</div>
+            <div class="letter-box">4</div>
+            <div class="letter-box">5</div>
+        </div>
+
+    </div>
+
+    <input id="inputBox" type="text" maxlength="5" autofocus onkeydown="getInputArray(this)">
+
+</body>
+</html>
