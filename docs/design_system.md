@@ -1,20 +1,36 @@
 # Design System
 
-![A raw HTML/CSS main page preview](assets/design_system/main.png)
+## Gameplay
+Start game by clicking on button "New word"
+
+<p> Play game by writing words in input box. After word is input 
+the game will tell you if the letters are in the word, correct position in the word 
+or not in the word using colors. Player will have 6 guess total before failing. </p>
+
+<p> Score will be shown by amound of guesses taken. </p>
+
+<p> Game end after correct word is guessed or after 6 incorrect guesses</p>
+
+## Components
+
+Letter Box
+
+![Letter Boxes](assets/design_system/letterboxes.png)
+
+Input Box
 
 
 ## Colours
-
 | Hex Code | Display | Description |
 | --- | --- | --- |
-| #cc0001 | --- | Accent color|
-| #111    | --- | Text color |
-| #818181 | --- | Text accent color|
-| #4b4b4b | --- | Text accent color|
+| #fff    | ![Default color](assets/design_system/default.svg) | Default background color|
+| #538d4e | ![Default color](assets/design_system/correct.svg)| Letter in correct position |
+| #b59f3b | ![Default color](assets/design_system/present.svg) | Letter in word |
+| #565758 | ![Default color](assets/design_system/notpresent.svg) | Letter not in word|
 
 
 ## Fonts
 
 | Name | Description |
 |--- | --- | 
-| Lato sans-serif | Primary font | 
+|  | | 
