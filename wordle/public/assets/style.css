@@ -1,32 +1,44 @@
-:root{
+:root {
     --green: #538d4e;
     --yellow: #b59f3b;
     --gray: #565758;
     --white: #fff;
 }
 
-body{
+body {
+    font-family: sans-serif;
     display: grid;
     align-items: center;
     justify-content: center;
 }
 
-.board{
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.board {
     display: grid;
     row-gap: 10px;
-
+    align-items: center;
+    justify-content: center;
 }
 
-.row{
+.row {
     column-gap: 50px;
-
 }
 
-.letter-box{
+.letter-box {
     box-sizing: content-box;
     height: 50px;
     width: 50px;
-    border: 1px solid black;
+    padding: 0.2rem;
+    border: 2px solid gray;
+    border-radius: 20%;
     float: left;
     margin-right: 5px;
     display: flex;
@@ -34,10 +46,47 @@ body{
     justify-content: center;
     background-color: var(--white);
     font-size: 40px;
-
+    text-transform: uppercase;
 }
 
-.input-container{
+.input-container {
     position: relative;
     top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#keyboard-cont {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#keyboard-cont div {
+    display: flex;
+}
+
+.second-row {
+    margin: 0.5rem 0;
+}
+
+.keyboard-button {
+    border: 2px solid gray;
+    font-size: 20px;
+    font-weight: 700;
+    width: 40px;
+    padding: 0.5rem;
+    margin: 0 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: var(--white);
+    border-radius: 20%;
+}
+
+.large-key {
+    font-size: 15px;
+    width: fit-content !important ;
+    text-align: center;
 }

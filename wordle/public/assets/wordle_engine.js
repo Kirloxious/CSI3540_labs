@@ -2,6 +2,7 @@ const colors = {
   green: "#538d4e",
   yellow: "#b59f3b",
   gray: "#565758",
+  white: "#fff",
 };
 const gameController = {
   words: ["fight", "steak", "input", "steam", "sense"],
@@ -24,10 +25,11 @@ const gameController = {
 };
 
 window.onload = function () {
-  // gameController.chosenWord = gameController.selectRandomWord(); // selects the current games word
-  gameController.chosenWord = "sense";
+  gameController.chosenWord = gameController.selectRandomWord(); // selects the current games word
+  // gameController.chosenWord = "sense";
   console.log(gameController.chosenWord);
   gameController.getNextRow();
+  highlightCurrentRow();
   const inputBox = document.getElementById("inputBox");
   if (gameController.currentRow <= 6) {
     inputBox.addEventListener("input", updateValues);
@@ -39,6 +41,9 @@ window.onload = function () {
         );
         console.log(result);
         updateColors(result);
+        for (let i = 0; i < 5; i++) {
+          shadeKeyBoard(gameController.userInput.split("")[i], result[i]);
+        }
         inputBox.value = "";
 
         if (checkWin(result)) {
@@ -50,6 +55,7 @@ window.onload = function () {
           inputBox.removeEventListener("input", updateValues);
         } else {
           gameController.getNextRow();
+          highlightCurrentRow();
         }
       }
     });
@@ -74,6 +80,13 @@ function setValues() {
 function updateColors(colorResult) {
   for (let i = 0; i < 5; i++) {
     gameController.rowBoxes[i].style.backgroundColor = colorResult[i];
+    gameController.rowBoxes[i].style.color = colors.white;
+  }
+}
+
+function highlightCurrentRow() {
+  for (let i = 0; i < 5; i++) {
+    gameController.rowBoxes[i].style.borderColor = "#000000";
   }
 }
 
@@ -105,11 +118,25 @@ function checkCorrectLetter(input, word) {
 }
 
 function checkWin(result) {
-  return result.map((r) => {
-    return r === colors.green;
+  return result.every((val) => {
+    return val == colors.green;
   });
 }
 
-function countLetterOccurence(str, letter) {
-  return str.filter((char) => char === letter).length;
+function shadeKeyBoard(letter, color) {
+  for (const elem of document.getElementsByClassName("keyboard-button")) {
+    if (elem.textContent === letter) {
+      let oldColor = elem.style.backgroundColor;
+      if (oldColor === "green") {
+        return;
+      }
+
+      if (oldColor === "yellow" && color !== "green") {
+        return;
+      }
+
+      elem.style.backgroundColor = color;
+      break;
+    }
+  }
 }
