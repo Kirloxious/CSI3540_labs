@@ -177,7 +177,7 @@ function showGameResultPopup(win){
     popup.classList.toggle("show")
   }
   else{
-    popup.innerHTML = `You lose! The word was ${gameController.chosenWord} <button class="popupbutton" type="reset" onClick="reload();">Again?</button>`
+    popup.innerHTML = `You lose!<br> The word was ${gameController.chosenWord} <button class="popupbutton" type="reset" onClick="reload();">Again?</button>`
     popup.classList.toggle("show") 
   }
 }
