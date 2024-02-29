@@ -151,5 +151,42 @@ li.projectName{
 
 h3 {
   color: #4b4b4b;
-  margin-top: 0;
+  margin-top: 5px;
 }
+
+.project{
+  border: 2px solid black;
+  border-radius: 20px;
+  margin-right: 35%;
+  display: flex;
+  margin-top: 10px;
+  background-color: #000000ec;
+  color: #818181 ;
+}
+
+.project1{
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.pdescription{
+  float: left;
+}
+
+.images{
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  display: flex;
+  float: right;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.p-subtitle{
+  margin-top: 10px;
+  text-decoration: underline;
+}
+
