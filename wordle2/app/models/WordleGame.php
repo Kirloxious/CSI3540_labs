@@ -10,12 +10,6 @@ enum color: string
     case WHITE = "#fff";
 }
 
-class board
-{
-}
-
-
-
 class WordleGame
 {
     public $WordleEngine;
