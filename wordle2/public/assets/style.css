@@ -1,0 +1,170 @@
+:root {
+    --green: #538d4e;
+    --yellow: #b59f3b;
+    --gray: #565758;
+    --white: #fff;
+}
+
+body {
+    font-family: sans-serif;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.score-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+
+}
+
+.board {
+    display: grid;
+    row-gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.row {
+    column-gap: 50px;
+}
+
+.letter-box {
+    box-sizing: content-box;
+    height: 50px;
+    width: 50px;
+    padding: 0.2rem;
+    border: 2px solid gray;
+    border-radius: 20%;
+    float: left;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.input-container {
+    position: relative;
+    top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#keyboard-cont {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#keyboard-cont div {
+    display: flex;
+}
+
+.second-row {
+    margin: 0.5rem 0;
+}
+
+.keyboard-button {
+    border: 2px solid gray;
+    font-size: 20px;
+    font-weight: 700;
+    width: 40px;
+    padding: 0.5rem;
+    margin: 0 2px;
+    text-transform: uppercase;
+    background-color: var(--white);
+    border-radius: 20%;
+}
+
+.large-key {
+    font-size: 15px;
+    width: fit-content !important ;
+    text-align: center;
+}
+
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+  }
+
+
+  .popup .show {
+    visibility: visible;
+  }
+
+  .popup .showtemp{
+    visibility: visible;
+    animation: fadeOut 2s forwards;
+  }
+
+  .popupbutton{
+    border-radius: 5px;
+  }
+
+  /* CSS */
+  .popupbutton{
+    background-color: #fff;
+    border: 1px solid #d5d9d9;
+    border-radius: 8px;
+    box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+    box-sizing: border-box;
+    color: #0f1111;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 29px;
+    padding: 0 10px 0 11px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    width: 70px;
+  }
+  
+  .button-13:hover {
+    background-color: #f7fafa;
+  }
+  
+  .button-13:focus {
+    border-color: #008296;
+    box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+    outline: 0;
+  }
+
+
+
+  @keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+
+  
